@@ -1,0 +1,54 @@
+<mat-table [dataSource]="dataSource" matSort>
+    <!-- Address Column -->
+    <ng-container matColumnDef="ID" >
+      <mat-header-cell *matHeaderCellDef mat-sort-header [ngClass]="'w-75'"> ID </mat-header-cell>
+      <mat-cell *matCellDef="let row" [ngClass]="'w-75'"> {{row.ID}} </mat-cell>
+    </ng-container>
+
+    <!-- Bank ID Column -->
+    <ng-container matColumnDef="Title">
+      <mat-header-cell *matHeaderCellDef mat-sort-header [ngClass]="'rpad'"> Title </mat-header-cell>
+      <mat-cell *matCellDef="let row" [ngClass]="'rpad'"> {{row.Title}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Volume">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Volume </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.Volume}} </mat-cell>
+    </ng-container>
+
+    <!-- City Column -->
+    <ng-container matColumnDef="Year">
+      <mat-header-cell *matHeaderCellDef mat-sort-header [ngClass]="'w-100'"> Year </mat-header-cell>
+      <mat-cell *matCellDef="let row" [ngClass]="'w-100'"> {{row.Year}} </mat-cell>
+    </ng-container>
+
+    <!-- District Column -->
+    <ng-container matColumnDef="Publisher">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Publisher </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.Publisher}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Note">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Note </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Note}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Appearance">
+        <mat-header-cell *matHeaderCellDef mat-sort-header [ngClass]="'rpad'"> Appearance </mat-header-cell>
+        <mat-cell *matCellDef="let row" [ngClass]="'rpad'"> {{row.Appearance}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="Value">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Value </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.Value}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="Image">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>
+        <mat-cell *matCellDef="let row"> <img [src]="nice.jpg"> </mat-cell>
+      </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+</mat-table>
