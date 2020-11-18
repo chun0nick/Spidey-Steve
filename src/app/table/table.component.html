@@ -1,3 +1,5 @@
+<div>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 <mat-table [dataSource]="dataSource" matSort>
     <!-- Address Column -->
     <ng-container matColumnDef="ID" >
@@ -45,10 +47,11 @@
 
       <ng-container matColumnDef="Image">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>
-        <mat-cell *matCellDef="let row"> <img [src]="nice.jpg"> </mat-cell>
+        <mat-cell *matCellDef="let row"> <img src={{row.Image_URL}} (click)="openDialog(row.Title, row.Volume, row.Image_URL)" width="70" height="100"> </mat-cell>
       </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;">
     </mat-row>
 </mat-table>
+</div>

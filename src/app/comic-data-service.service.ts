@@ -10,7 +10,7 @@ export class ComicDataService {
 
   constructor(private http: HttpClient) { }
 
-  getAppearances(partition : number) : any {
-    return this.http.get(this.appearancesURL + partition)
+  getAppearances() : any {
+    return this.http.get(this.appearancesURL)
   }
 }

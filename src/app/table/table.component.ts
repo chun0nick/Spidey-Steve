@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ViewChild } from '@angular/core'
 import { ComicDataService } from '../comic-data-service.service';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { ImageDialogComponent } from '../image-dialog/image-dialog.component';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-table',
@@ -11,13 +15,25 @@ export class TableComponent implements OnInit {
   dataSource : MatTableDataSource<Comic>;
   displayedColumns = ["ID", "Title", "Volume", "Year", "Publisher", "Note", "Appearance","Value", "Image"];
 
-  constructor(private comicData : ComicDataService) { }
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: false}) sort: MatSort;
+
+  constructor(private comicData : ComicDataService, public dialog: MatDialog) { }
 
   ngOnInit() {
-    this.getData(0);
+    this.getData();
   }
-  getData(partition: number) {
-    this.comicData.getAppearances(partition).subscribe((apps) => {this.dataSource = new MatTableDataSource(apps)})
+
+  getData() {
+    this.comicData.getAppearances().subscribe((apps) => {
+      this.dataSource = new MatTableDataSource(apps);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;})
+  }
+  openDialog(name: string, volume : string, url: string) {
+    let dialogRef = this.dialog.open(ImageDialogComponent);
+    dialogRef.componentInstance.name = name + ' ' + volume;
+    dialogRef.componentInstance.url = url;
   }
 }
 
@@ -31,6 +47,5 @@ export interface Comic{
   Appearance: string;
   Box: string;
   Value: string;
-  Image_Box: string;
-  Image_File_Name: string;
+  Image_URL: string;
 }

@@ -7,12 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './table/table.component'
 import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
-  MatSortModule, MatTableModule } from "@angular/material";
+  MatSortModule, MatTableModule, MatButtonModule } from "@angular/material";
+  import {MatDialogModule} from '@angular/material/dialog';
+import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+    ImageDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -24,8 +27,11 @@ import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
     MatPaginatorModule, 
     MatProgressSpinnerModule, 
     MatSortModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ImageDialogComponent]
 })
 export class AppModule { }
