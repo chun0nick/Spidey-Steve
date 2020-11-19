@@ -1,5 +1,15 @@
-<h1 mat-dialog-title>{{name}}</h1>
-<div mat-dialog-content><img src={{url}} width="400" height="600"></div>
+<h1 mat-dialog-title>{{comic.Title + ' ' + comic.Volume}}</h1>
+
+<div mat-dialog-content>
+  <img src={{comic.Image_URL}} width="400" height="600">
+  <mat-list class="comicInfo">
+    <mat-divider></mat-divider>
+    <mat-list-item>Published: {{comic.Year}}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Appearance: {{comic.Appearance}}</mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Close</button>
 </div>

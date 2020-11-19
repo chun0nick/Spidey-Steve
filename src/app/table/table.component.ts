@@ -1,10 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { ComicDataService } from '../comic-data-service.service';
-import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { ImageDialogComponent } from '../image-dialog/image-dialog.component';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-table',
@@ -12,28 +9,38 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  dataSource : MatTableDataSource<Comic>;
-  displayedColumns = ["ID", "Title", "Volume", "Year", "Publisher", "Note", "Appearance","Value", "Image"];
+  dataSource : Comic[];
+  content : Comic[];
+  counter : number;
 
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
-
-  constructor(private comicData : ComicDataService, public dialog: MatDialog) { }
+  constructor(private comicData : ComicDataService, public dialog: MatDialog) {
+    this.counter = 100;
+   }
 
   ngOnInit() {
     this.getData();
   }
+  
+  loadMore() {
+    for (let i=this.counter; i < this.dataSource.length;) {
+        this.content.push(this.dataSource[i]);
+        i++;
+        if (i % 100 == 0) break;
+    }
+    let el = document.getElementById("image" + this.counter);
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    this.counter += 100;
+  }
 
   getData() {
     this.comicData.getAppearances().subscribe((apps) => {
-      this.dataSource = new MatTableDataSource(apps);
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;})
+      this.dataSource = apps;
+      this.content = this.dataSource.slice(0,100);
+      });
   }
-  openDialog(name: string, volume : string, url: string) {
+  openDialog(comic: Comic) {
     let dialogRef = this.dialog.open(ImageDialogComponent);
-    dialogRef.componentInstance.name = name + ' ' + volume;
-    dialogRef.componentInstance.url = url;
+    dialogRef.componentInstance.comic = comic;
   }
 }
 

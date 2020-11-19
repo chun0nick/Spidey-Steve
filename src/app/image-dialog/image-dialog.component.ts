@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Comic } from '../table/table.component';
 
 @Component({
   selector: 'app-image-dialog',
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./image-dialog.component.css']
 })
 export class ImageDialogComponent implements OnInit {
-  url : string;
-  name: string;
+  comic: Comic;
 
   constructor() { }
 

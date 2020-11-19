@@ -6,10 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './table/table.component'
-import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
-  MatSortModule, MatTableModule, MatButtonModule } from "@angular/material";
-  import {MatDialogModule} from '@angular/material/dialog';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
+import { MatListModule, MatButtonModule, MatGridListModule, MatDialogModule, MatToolbarModule, MatDividerModule } from '@angular/material/';
 
 @NgModule({
   declarations: [
@@ -22,12 +20,11 @@ import { ImageDialogComponent } from './image-dialog/image-dialog.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatTableModule, 
-    MatInputModule, 
-    MatPaginatorModule, 
-    MatProgressSpinnerModule, 
-    MatSortModule,
     MatDialogModule,
+    MatGridListModule,
+    MatToolbarModule,
+    MatDividerModule,
+    MatListModule,
     MatButtonModule
   ],
   providers: [],

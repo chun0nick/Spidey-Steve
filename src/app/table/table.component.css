@@ -1,9 +1,23 @@
-.w-75{
-    max-width: 40px;
+.fade:hover .centered{
+    opacity: 1;
 }
-.w-100{
-    max-width: 100px;
+.fade:hover {
+    opacity: 0.6;
 }
-.rpad {
-    padding-right: 10px;
-}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: black;
+  }
+
+  .mat-grid-tile {
+    text-align: center;
+  }
+
+  .buttonholder {
+    display: flex;
+    justify-content: center;
+  }
