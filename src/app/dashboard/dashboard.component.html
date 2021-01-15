@@ -1,0 +1,145 @@
+<div>
+    <mat-toolbar>
+        <span style="font-family: THE AMAZING SPIDER-MAN; font-size: xx-large;"> THE SPIDER-STEVE COLLECTION </span>
+        <div> (It's for sale-but not for long!)</div>
+    </mat-toolbar>
+</div>
+<div style="padding-bottom: 5px;">
+    <mat-card style= "border: 3px solid black; max-width: 200px; display: inline-block; vertical-align: top;">
+        <mat-card-header>
+            <mat-card-title style="font-family: THE AMAZING SPIDER-MAN; padding-left: 15px;">SPREADSHEETS</mat-card-title>
+        </mat-card-header>
+    <mat-list style="max-width: 200px;">
+        <mat-list-item style="min-height: 60px;">
+            <button style="min-height: 50px; min-width: 150px;"mat-raised-button routerLink='../asm'> ASM 1-700 </button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item style="min-height: 60px; padding-top: 10px;">
+            <button style="min-height: 50px; min-width: 150px;" mat-raised-button routerLink='../appearances'>Appearances</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item style="min-height: 60px; padding-top: 10px;">
+            <button style="min-height: 50px;min-width: 150px;" mat-raised-button>Giveaways</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item style="min-height: 60px; padding-top: 10px;">
+            <button style="min-height: 50px;min-width: 150px;" mat-raised-button>Toys</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item style="min-height: 60px; padding-top: 10px;">
+            <button style="min-height: 50px;min-width: 150px;" mat-raised-button>Art</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item style="min-height: 60px; padding-top: 20px;">
+            <button style="min-height: 50px;min-width: 150px;" mat-raised-button>The Rest</button>
+        </mat-list-item>
+    </mat-list>
+</mat-card>
+    <mat-card style = "display: inline-block; vertical-align: top; border: 3px solid black">
+        <mat-card-header>
+            <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">COLLECTION INTRODUCTION</mat-card-title>
+          </mat-card-header>
+            <video controls #videoPlayer style="max-width: 690px;" >
+                <source src="{{'assets/IMG_1816.mp4'}}" type="video/mp4">
+                Your browser does not support the video tag.
+          </video>
+    </mat-card>          
+    <mat-card style = "display: inline-block; vertical-align: top; border: 3px solid black">
+        <mat-card-header>
+            <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">COLLECTION COMIC BOOK</mat-card-title>
+          </mat-card-header>
+            <img class="fade" style = "max-width: 503px" src="{{'assets/cover.jpg'}}" (click)="openDialog('Collection Comic', 1, ['assets/cover.jpg'], )">
+    </mat-card>
+</div>
+<div style="padding-bottom: 5px;">
+    <mat-card style="display: inline-block; vertical-align: top; width: 70.5%; border: 3px solid black;">
+        <mat-card-header>
+            <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">PREQUELS</mat-card-title>
+        </mat-card-header>
+        <mat-grid-list cols="3" rowHeight="1:1.5">
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/26st97.JPG'}}" (click)="openDialog('Strange Tales', 97, 'assets/26st97.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/2aaf14.JPG'}}" (click)="openDialog('Amazing Adult Fantasy', 14, 'assets/2aaf14.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/7(2).JPG'}}" (click)="openDialog('Diabolique', 3, 'assets/7(2).JPG')">
+            </mat-grid-tile>
+            </mat-grid-list>
+    </mat-card>
+    <mat-card style="display: inline-block; vertical-align: top; width:22%; border: 3px solid black">
+        <mat-card-header>
+            <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">AMAZING FANTASY</mat-card-title>
+        </mat-card-header>
+        <img class="fade" style="max-width: 100%; max-height:100%;" src="{{'assets/2.JPG'}}" (click)="openDialog('Amazing Fantasy', 15, 'assets/2.JPG')">
+    </mat-card>
+</div>
+<div>
+<mat-card style="border: 3px solid black">
+    <mat-card-header>
+        <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;"> THE AMAZING SPIDER-MAN</mat-card-title>
+      </mat-card-header>
+<mat-grid-list cols="5" rowHeight="1:1.5">
+<mat-grid-tile routerLinkActive="active">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/3.JPG'}}" (click)="openDialog('Amazing Spider-Man', 1, 'assets/3.JPG')">
+</mat-grid-tile>
+<mat-grid-tile>
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/4.JPG'}}" (click)="openDialog('Amazing Spider-Man', 2, 'assets/4.JPG')">
+</mat-grid-tile>
+<mat-grid-tile>
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/5.JPG'}}" (click)="openDialog('Amazing Spider-Man', 3, 'assets/5.JPG')">
+</mat-grid-tile>
+<mat-grid-tile>
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/6.JPG'}}" (click)="openDialog('Amazing Spider-Man', 4, 'assets/6.JPG')">
+</mat-grid-tile>
+<mat-grid-tile>
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/7.JPG'}}" (click)="openDialog('Amazing Spider-Man', 5, 'assets/7.JPG')">
+</mat-grid-tile>
+</mat-grid-list>
+</mat-card>
+</div>
+<div style="padding-bottom: 5px;">
+    <mat-card style="border: 3px solid black">
+        <mat-card-header>
+            <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;"> TOYS </mat-card-title>
+          </mat-card-header>
+    <mat-grid-list cols="5" rowHeight="1:1.5">
+    <mat-grid-tile>
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5389.JPG'}}" (click)="openDialog('Captain Action', 1, 'assets/IMG_5389.JPG')">
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5826.JPG'}}" (click)="openDialog('Marvel Super Hero Express', 1, 'assets/IMG_5826.JPG')">
+    </mat-grid-tile>
+    <mat-grid-tile routerLinkActive="active">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5375.JPG'}}" (click)="openDialog('Amazing Spider Man Scooter', 1, 'assets/IMG_5375.JPG')">
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5852.JPG'}}" (click)="openDialog('Marvel Pops', 1, 'assets/IMG_5852.JPG')">
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5967.JPG'}}" (click)="openDialog('Marvel Mini Books', 1, 'assets/IMG_5967.JPG')">
+    </mat-grid-tile>
+    </mat-grid-list>
+    </mat-card>
+</div>
+
+    <!--
+    <mat-grid-tile>
+        <img class="fade"  style="max-width:100%; max-height:100%;" src="{{'assets/BOX 20 (1).JPG'}}">
+        <div class="centered">Giveaways</div> 
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <img class="fade" routerLink='../appearances' style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5364.JPG'}}">
+        <div class="centered">Toys</div> 
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <img class="fade" routerLink='../appearances' style="max-width:100%; max-height:100%;" src="{{'assets/25.JPG'}}">
+        <div class="centered">Off-Beat Rare Items</div> </mat-grid-tile>
+    <mat-grid-tile>
+        <img class="fade" routerLink='../appearances' style="max-width:100%; max-height:100%;" src="{{'assets/2.JPG'}}">
+        <div class="centered">Amazing Fantasy 15</div> 
+    </mat-grid-tile>
+    </mat-grid-list>
+</div>
+-->

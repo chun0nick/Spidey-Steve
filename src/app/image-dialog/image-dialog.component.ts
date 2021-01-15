@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./image-dialog.component.css']
 })
 export class ImageDialogComponent implements OnInit {
-  url : string;
+  imageURLArray: string[];
   name: string;
 
   constructor() { }

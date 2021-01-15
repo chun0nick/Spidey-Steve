@@ -7,10 +7,14 @@ import { Observable, of } from 'rxjs';
 })
 export class ComicDataService {
   private appearancesURL = "http://127.0.0.1:5000/appearances/"
+  private asmURL = "http://127.0.0.1:5000/ASM/"
 
   constructor(private http: HttpClient) { }
 
   getAppearances() : any {
-    return this.http.get(this.appearancesURL)
+    return this.http.get(this.appearancesURL);
+  }
+  getASM() : any {
+    return this.http.get(this.asmURL);
   }
 }

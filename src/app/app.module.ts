@@ -3,19 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './table/table.component'
-import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
-  MatSortModule, MatTableModule, MatButtonModule } from "@angular/material";
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, MatListModule,
+  MatSortModule, MatTableModule, MatButtonModule, MatToolbarModule, MatGridListModule, MatDividerModule, MatCardModule} from "@angular/material";
   import {MatDialogModule} from '@angular/material/dialog';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    ImageDialogComponent
+    ImageDialogComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,13 @@ import { ImageDialogComponent } from './image-dialog/image-dialog.component';
     MatProgressSpinnerModule, 
     MatSortModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatGridListModule,
+    MatDividerModule,
+    MatListModule,
+    MatCardModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent],
