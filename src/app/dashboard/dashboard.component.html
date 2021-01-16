@@ -1,7 +1,9 @@
 <div>
-    <mat-toolbar>
-        <span style="font-family: THE AMAZING SPIDER-MAN; font-size: xx-large;"> THE SPIDER-STEVE COLLECTION </span>
-        <div> (It's for sale-but not for long!)</div>
+    <mat-toolbar style="margin: 0 auto;">
+        <mat-toolbar-row>
+        <span style="font-family: THE AMAZING SPIDER-MAN; font-size: xx-large; margin: auto;"> THE SPIDER-STEVE COLLECTION </span>
+        </mat-toolbar-row>
+        <span style="margin:auto;"> (It's for sale-but not for long!)</span>
     </mat-toolbar>
 </div>
 <div style="padding-bottom: 5px;">
@@ -48,7 +50,7 @@
         <mat-card-header>
             <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">COLLECTION COMIC BOOK</mat-card-title>
           </mat-card-header>
-            <img class="fade" style = "max-width: 503px" src="{{'assets/cover.jpg'}}" (click)="openDialog('Collection Comic', 1, ['assets/cover.jpg'], )">
+            <img class="fade" style = "max-width: 503px" src="{{'assets/cover.jpg'}}" routerLink='../comic'>
     </mat-card>
 </div>
 <div style="padding-bottom: 5px;">
@@ -58,13 +60,13 @@
         </mat-card-header>
         <mat-grid-list cols="3" rowHeight="1:1.5">
             <mat-grid-tile routerLinkActive="active">
-                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/26st97.JPG'}}" (click)="openDialog('Strange Tales', 97, ['assets/26st97.JPG'])">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/26st97.JPG'}}" (click)="openDialog('Strange Tales', 97, 'assets/26st97.JPG')">
             </mat-grid-tile>
             <mat-grid-tile>
-                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/2aaf14.JPG'}}" (click)="openDialog('Amazing Adult Fantasy', 14, ['assets/2aaf14.JPG'])">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/2aaf14.JPG'}}" (click)="openDialog('Amazing Adult Fantasy', 14, 'assets/2aaf14.JPG')">
             </mat-grid-tile>
             <mat-grid-tile>
-                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/7(2).JPG'}}" (click)="openDialog('Diabolique', 3, ['assets/7(2).JPG'])">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/7(2).JPG'}}" routerLink='../diabolique'>
             </mat-grid-tile>
             </mat-grid-list>
     </mat-card>
@@ -72,7 +74,7 @@
         <mat-card-header>
             <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">AMAZING FANTASY</mat-card-title>
         </mat-card-header>
-        <img class="fade" style="max-width: 100%; max-height:100%;" src="{{'assets/2.JPG'}}" (click)="openDialog('Amazing Fantasy', 15, ['assets/2.JPG'])">
+        <img class="fade" style="max-width: 100%; max-height:100%;" src="{{'assets/2.JPG'}}" (click)="openDialog('Amazing Fantasy', 15, 'assets/2.JPG')">
     </mat-card>
 </div>
 <div>
@@ -82,19 +84,19 @@
       </mat-card-header>
 <mat-grid-list cols="5" rowHeight="1:1.5">
 <mat-grid-tile routerLinkActive="active">
-    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/3.JPG'}}" (click)="openDialog('Amazing Spider-Man', 1, ['assets/3.JPG')]">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/3.JPG'}}" (click)="openDialog('Amazing Spider-Man', 1, 'assets/3.JPG')">
 </mat-grid-tile>
 <mat-grid-tile>
-    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/4.JPG'}}" (click)="openDialog('Amazing Spider-Man', 2, ['assets/4.JPG'])">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/4.JPG'}}" (click)="openDialog('Amazing Spider-Man', 2, 'assets/4.JPG')">
 </mat-grid-tile>
 <mat-grid-tile>
-    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/5.JPG'}}" (click)="openDialog('Amazing Spider-Man', 3, ['assets/5.JPG'])">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/5.JPG'}}" (click)="openDialog('Amazing Spider-Man', 3, 'assets/5.JPG')">
 </mat-grid-tile>
 <mat-grid-tile>
-    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/6.JPG'}}" (click)="openDialog('Amazing Spider-Man', 4, ['assets/6.JPG'])">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/6.JPG'}}" (click)="openDialog('Amazing Spider-Man', 4, 'assets/6.JPG')">
 </mat-grid-tile>
 <mat-grid-tile>
-    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/7.JPG'}}" (click)="openDialog('Amazing Spider-Man', 5, ['assets/7.JPG')]">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/7.JPG'}}" (click)="openDialog('Amazing Spider-Man', 5, 'assets/7.JPG')">
 </mat-grid-tile>
 </mat-grid-list>
 </mat-card>
@@ -106,19 +108,29 @@
           </mat-card-header>
     <mat-grid-list cols="5" rowHeight="1:1.5">
     <mat-grid-tile>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5389.JPG'}}" (click)="openDialog('Captain Action', 1, ['assets/IMG_5389.JPG'])">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5389.JPG'}}" (click)="openDialog('Captain Action', 1, 'assets/IMG_5389.JPG')">
     </mat-grid-tile>
     <mat-grid-tile>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5826.JPG'}}" (click)="openDialog('Marvel Super Hero Express', 1, ['assets/IMG_5826.JPG'])">
-    </mat-grid-tile>
-    <mat-grid-tile routerLinkActive="active">
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5375.JPG'}}" (click)="openDialog('Amazing Spider Man Scooter', 1, ['assets/IMG_5375.JPG'])">
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5852.JPG'}}" (click)="openDialog('Marvel Pops', 1, ['assets/IMG_5852.JPG'])">
+        <div>
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5826.JPG'}}" (click)="openDialog('Marvel Super Hero Express', 1, 'assets/IMG_5826.JPG')">
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5375.JPG'}}" (click)="openDialog('Amazing Spider Man Scooter', 1, 'assets/IMG_5375.JPG')">
+        </div>
     </mat-grid-tile>
     <mat-grid-tile>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5967.JPG'}}" (click)="openDialog('Marvel Mini Books', 1, ['assets/IMG_5967.JPG'])">
+    <div>
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/flyers.jpg'}}" (click)="openDialog('Marvel Flyers', 1, 'assets/flyers.jpg')">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/flyers3.JPG'}}" (click)="openDialog('Marvel Flyers', 2, 'assets/flyers3.JPG')">
+    </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+    <div>
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/IMG_5967.JPG'}}" (click)="openDialog('Marvel Mini Books', 1, 'assets/IMG_5967.JPG')">
+        <img class="fade" style="padding-left: 40px; max-width:70%; max-height:70%;" src="{{'assets/mini.jpg'}}" (click)="openDialog('Marvel Mini Books', 1, 'assets/mini.jpg')">
+    </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'assets/pinball.JPG'}}" (click)="openDialog('Spiderman Pinball Machine', 1, 'assets/pinball.JPG')">
     </mat-grid-tile>
     </mat-grid-list>
     </mat-card>

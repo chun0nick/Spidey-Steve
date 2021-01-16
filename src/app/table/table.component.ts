@@ -19,8 +19,8 @@ export class TableComponent implements OnInit {
   video;
   name;
 
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   constructor(private comicData : ComicDataService, public dialog: MatDialog, private route: ActivatedRoute) { }
 
@@ -49,10 +49,10 @@ export class TableComponent implements OnInit {
           })
       }});
 }
-  openDialog(name: string, volume : string, url: string) {
+  openDialog(name: string, volume : string, url: string[]) {
     let dialogRef = this.dialog.open(ImageDialogComponent);
     dialogRef.componentInstance.name = name + ' ' + volume;
-    dialogRef.componentInstance.url = url;
+    dialogRef.componentInstance.imageURLArray = url;
   }
 }
 

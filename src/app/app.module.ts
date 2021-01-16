@@ -13,13 +13,15 @@ import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, MatListMo
   import {MatDialogModule} from '@angular/material/dialog';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     ImageDialogComponent,
-    DashboardComponent
+    DashboardComponent,
+    SlideshowComponent
   ],
   imports: [
     BrowserModule,
