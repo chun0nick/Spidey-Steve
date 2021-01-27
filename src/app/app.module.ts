@@ -14,6 +14,7 @@ import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, MatListMo
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { SlideshowComponent } from './slideshow/slideshow.component';
+import { SpreadlistComponent } from './spreadlist/spreadlist.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SlideshowComponent } from './slideshow/slideshow.component';
     TableComponent,
     ImageDialogComponent,
     DashboardComponent,
-    SlideshowComponent
+    SlideshowComponent,
+    SpreadlistComponent
   ],
   imports: [
     BrowserModule,

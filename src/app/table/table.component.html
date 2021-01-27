@@ -1,6 +1,5 @@
-<div>
-  <mat-toolbar>{{this.name}}</mat-toolbar>
-</div>
+
+<mat-toolbar>{{this.name}}</mat-toolbar>
 <!--
 <div>
   <video controls height="600" style="right: 0; top: 0; min-width:100%;"
@@ -49,10 +48,16 @@
       <mat-cell *matCellDef="let row"> {{row.Publisher}} </mat-cell>
     </ng-container>
 
+    <ng-container matColumnDef="Sponsor">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Sponsor </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.Sponsor}} </mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="Note">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Note </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.Note}} </mat-cell>
       </ng-container>
+      
       <ng-container matColumnDef="Appearance">
         <mat-header-cell *matHeaderCellDef mat-sort-header [ngClass]="'rpad'"> Appearance </mat-header-cell>
         <mat-cell *matCellDef="let row" [ngClass]="'rpad'"> {{row.Appearance}} </mat-cell>
@@ -60,7 +65,7 @@
 
       <ng-container matColumnDef="Image">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>
-        <mat-cell *matCellDef="let row"> <img src={{row.Image_URL}} (click)="openDialog(row.Title, row.Volume, [row.Image_URL])" width="70" height="100"> </mat-cell>
+        <mat-cell *matCellDef="let row"> <img src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/' + row.Image_URL}}" (error)="img.src='https://spider-steve-backend.wl.r.appspot.com/get_image/home/soon.jpg'; fixrow(row);" (click)="openDialog(row.Title, row.Volume, 'https://spider-steve-backend.wl.r.appspot.com/get_image/' + row.Image_URL)" width="70" height="100" #img> </mat-cell>
       </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

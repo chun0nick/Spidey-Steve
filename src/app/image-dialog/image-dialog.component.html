@@ -1,5 +1,7 @@
 <h1 mat-dialog-title>{{name}}</h1>
-<div mat-dialog-content><img src={{url}} width="600px" height="800px"></div>
+<div mat-dialog-content>
+  <img src={{url}} style="max-width: 100%; max-height: 100%; object-fit:contain;">
+</div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Close</button>
 </div>

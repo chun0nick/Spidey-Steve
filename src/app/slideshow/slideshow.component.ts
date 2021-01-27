@@ -22,9 +22,12 @@ export class SlideshowComponent implements OnInit {
          '/assets/JPEGs/14.jpg', '/assets/JPEGs/15.jpg', '/assets/JPEGs/16.jpg',
          '/assets/JPEGs/17.jpg']
       } else if (v.spread === "dia") {
-        this.imageURLS = ['/assets/dia1.JPG', '/assets/dia2.JPG'];
+        this.imageURLS = [ '/assets/dia2.JPG', '/assets/dia1.JPG',
+        ];
       }
     })
   }
-
+  goToTop(): void {
+    window.scroll({top: 0, left: 0, behavior: 'smooth'});
+  }
 }

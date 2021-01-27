@@ -20,6 +20,22 @@ export class DashboardComponent implements OnInit {
     dialogRef.componentInstance.url = url;
   }
 
+  diaarticle() {
+    window.open("assets/diabolique.pdf");
+  }
+
+  openArticle() {
+    window.open("assets/fullarticle.pdf");
+  }
+
+  openPersonal() {
+    window.open("https://www.levine-criminal-law.com/")
+  }
+
+  openQA() {
+    window.open("https://sandiego.splashmags.com/index.php/2018/07/04/100-insane-rhyming-quatrain-original-little-riddles-review-qa-with-author-attorney-steve-levine/#gsc.tab=0")
+  }
+
   ngOnInit() {
   }
 

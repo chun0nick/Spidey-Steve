@@ -1,0 +1,337 @@
+<div *ngIf="toys">
+    <div>
+        <mat-toolbar style="font-family: THE AMAZING SPIDER-MAN;"> TOYS </mat-toolbar>
+        <mat-card style="border: 3px solid black">
+        <mat-grid-list cols="3" rowHeight="1:1.5">
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5622.JPG'}}" routerLink="../grailtoys">
+                <div class="centered"> Grail Toys </div>
+            </mat-grid-tile>
+        <mat-grid-tile>
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5430.JPG'}}" routerLink="../boxedtoys">
+            <div class="centered"> Toys in Boxes </div>
+        </mat-grid-tile>
+        <mat-grid-tile routerLinkActive="active">
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5389.JPG'}}" routerLink="../showcasetoys">
+            <div class="centered"> Showcase Toys </div>
+        </mat-grid-tile>
+        </mat-grid-list>
+        </mat-card>
+        </div>
+</div>
+
+<div *ngIf="giveaways">
+    <div>
+        <mat-toolbar style="font-family: THE AMAZING SPIDER-MAN;"> GIVEAWAYS </mat-toolbar>
+        <mat-card style="border: 3px solid black">
+        <mat-grid-list cols="4" rowHeight="1:1.5">
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/box56/2.JPG'}}" routerLink="../largegiveaways">
+                <div class="centered"> Large Giveaways </div>
+            </mat-grid-tile>
+        <mat-grid-tile>
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/comicgive.JPG'}}" routerLink="../comicgiveaways">
+            <div class="centered"> Comic Size Giveaways </div>
+        </mat-grid-tile>
+        <mat-grid-tile routerLinkActive="active">
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/raregive.JPG'}}" routerLink="../raregiveaways">
+            <div class="centered"> Rare Giveaways </div>
+        </mat-grid-tile>
+        <mat-grid-tile routerLinkActive="active">
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5389.JPG'}}" routerLink="../smallgiveaways">
+            <div class="centered"> Small Giveaways </div>
+        </mat-grid-tile>
+        </mat-grid-list>
+        </mat-card>
+        </div>
+</div>
+<div *ngIf="art">
+    <div>
+        <mat-toolbar style="font-family: THE AMAZING SPIDER-MAN;"> ORIGINAL ART </mat-toolbar>
+        <mat-card style="border: 3px solid black"> 
+        <mat-grid-list cols="3" rows="7" rowHeight="1:1.5">
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_0399.JPG'}}" (click)="openDialog('Original Art by John Romita Sr.', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_0399.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_3036.JPG'}}" (click)="openDialog('Spectacular Spider-Man Original Art by John Romita Jr.', 223, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_3036.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5530.JPG'}}" (click)="openDialog('Spider-Man Power of Terror Original Art by Greg Adams', 4, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5530.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5531.JPG'}}" (click)="openDialog('Letter from Ditko', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5531.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5532.JPG'}}" (click)="openDialog('Original Art by Larry Lieber', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5532.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5533.JPG'}}" (click)="openDialog('Spectacular Spider-Man Original Art by John Romita Sr.', 290, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5533.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5534.JPG'}}" (click)="openDialog('Original Art by Mike Esposito', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5534.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-wi dth:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5535.JPG'}}" (click)="openDialog('Amazing Spider-Man Magic Wand Speaking Library Original Art by John Romita Sr.', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5535.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5536.JPG'}}" (click)="openDialog('Marvel Team-Up Original Art by Ross Andru', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5536.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5537.JPG'}}" (click)="openDialog('ASM Original Art by John Romita Sr.', 75, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5537.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5538.JPG'}}" (click)="openDialog('ASM Original Art by John Romita Sr.', 78, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5538.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5539.JPG'}}" (click)="openDialog('ASM Annual Original Art by John Romita Sr.', 5, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5539.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5540.JPG'}}" (click)="openDialog('Strange Tales', 97, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5540.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5541.JPG'}}" (click)="openDialog('ASM Original Art by John Romita Sr.', 61, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5541.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5542.JPG'}}" (click)="openDialog('Strange Tales', 97, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5542.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5543.JPG'}}" (click)="openDialog('Strange Tales', 97, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5543.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5544.JPG'}}" (click)="openDialog('Strange Tales', 97, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5544.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5545.JPG'}}" (click)="openDialog('Strange Tales', 97, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5545.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5546.JPG'}}" (click)="openDialog('Strange Tales', 97, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5546.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5547.JPG'}}" (click)="openDialog('Strange Tales', 97, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5547.JPG')">
+            </mat-grid-tile>
+            <mat-grid-tile routerLinkActive="active">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5548.JPG'}}" (click)="openDialog('Strange Tales', 97, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5548.JPG')">
+            </mat-grid-tile>
+        </mat-grid-list>
+        </mat-card>
+        </div>
+</div>
+<div *ngIf="rest">
+    <div>
+        <mat-toolbar style="font-family: THE AMAZING SPIDER-MAN;"> THE REST </mat-toolbar>
+        <mat-card style="border: 3px solid black">
+        <mat-grid-list cols="4" rows="14" rowHeight="1:1.5">
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/magapp.JPG'}}" routerLink="../asmappearancesinmagazines">
+                <div class = "centered"> ASM Appearances in Magazines</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/unslabbed.JPG'}}" routerLink="../asmearlyunslabbedappearances">
+                <div class = "centered"> ASM Early Unslabbed Appearances</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/2aaf14.JPG'}}" routerLink="../asmhighvalueappearancescgc">
+                <div class = "centered"> ASM High Value Appearances - CGC</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/cereal.JPG'}}" routerLink="../cerealfoodboxesandcalendars">
+                <div class = "centered"> Cereal Food Boxes and Calendars</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/comestolife.JPG'}}" routerLink="../comestolifebooksandreader">
+                <div class = "centered"> Comes To Life Books and Reader</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/comicon.JPG'}}" routerLink="../comicon">
+                <div class = "centered"> Comicon</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/cracked.JPG'}}" routerLink="../crackedcrazyandmadmag">
+                <div class = "centered"> Cracked, Crazy and Mad Mag</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/electric.JPG'}}" routerLink="../electriccompanymagazinescomplete">
+                <div class = "centered"> Electric Company Magazines - Complete</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/fanzine.JPG'}}" routerLink="../fanzines">
+                <div class = "centered"> Fanzines</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/giant.JPG'}}" routerLink="../giantsizebooksorig">
+                <div class = "centered"> Giant-Size Books (Orig. Buy) </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/giantcolor.jpg'}}" routerLink="../giantsizedcoloringbooksanditems">
+                <div class = "centered"> Giant-Sized Coloring Books and Items</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/handbook.JPG'}}" routerLink="../handbookmarveluniverse">
+                <div class = "centered"> Handbook Marvel Universe</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/age.JPG'}}" routerLink="../marvelageannpreview">
+                <div class = "centered"> Marvel Age-Ann-Preview</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/teamuk.JPG'}}" routerLink="../marvelteamupuk">
+                <div class = "centered"> Marvel Team-Up (UK)</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/team.JPG'}}" routerLink="../marvelteamup">
+                <div class = "centered"> Marvel Team-Up</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/mightyuk.JPG'}}" routerLink="../mightyworldofmarveluk">
+                <div class = "centered"> Mighty World of Marvel (UK)</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/dia1.JPG'}}" routerLink="../nude">
+                <div class = "centered"> Nude</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/officialhand.JPG'}}" routerLink="../officialhandbookmarveluniverse">
+                <div class = "centered"> Official Handbook Marvel Universe</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/officialhand.JPG'}}" routerLink="../officialhandbooksmarveluniverseall">
+                <div class = "centered"> Official Handbooks Marvel Universe - ALL</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/ppspec.JPG'}}" routerLink="../peterparkerspectacularspiderman">
+                <div class = "centered"> Peter Parker Spectacular Spiderman</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/ppspec2.JPG'}}" routerLink="../peterparkerspidermanvol">
+                <div class = "centered"> Peter Parker Spider-Man Vol 2</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/astonish.JPG'}}" routerLink="../salestoastonishmegamarveldealercatalogs">
+                <div class = "centered"> Sales To Astonish-Mega Marvel -Dealer Catalogs</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/sensational.JPG'}}" routerLink="../sensationalspiderman">
+                <div class = "centered"> Sensational Spider-Man</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/specann.JPG'}}" routerLink="../spectacularspidermanannuals">
+                <div class = "centered"> Spectacular Spiderman Annuals</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/spidergirl.JPG'}}" routerLink="../spidergirl">
+                <div class = "centered"> Spider-Girl</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/weekly.JPG'}}" routerLink="../spidermancomicsweeklyuk">
+                <div class = "centered"> Spider-Man Comics Weekly (UK)</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/flip.JPG'}}" routerLink="../spidermanflipbooks">
+                <div class = "centered"> Spider-Man Flipbooks</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/pin.JPG'}}" routerLink="../spidermangottliebpinballbooks">
+                <div class = "centered"> Spider-Man Gottlieb Pinball Books</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/offrare.JPG'}}" routerLink="../spidermanoffbeatrareitems">
+                <div class = "centered"> Spider-Man Off-Beat Rare Items </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/tpb.JPG'}}" routerLink="../spidermantpbgraphicnovelspbandhc">
+                <div class = "centered"> Spider-Man TPB, Graphic Novels, PB and HC</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/ukwint.JPG'}}" routerLink="../spidermanuksummer_wintsps">
+                <div class = "centered"> Spider-Man UK Summer_Wint Sps</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/mcfarlane.JPG'}}" routerLink="../spiderman1990mcfarlane">
+                <div class = "centered"> Spiderman 1990 (McFarlane)</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/30c.JPG'}}" routerLink="../spiderman30centvariants">
+                <div class = "centered"> spiderman 30 cent variants</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/cass.JPG'}}" routerLink="../spidermancassettes">
+                <div class = "centered"> Spiderman Cassettes</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/hardann.JPG'}}" routerLink="../spideybritishhardcoverbooks">
+                <div class = "centered"> Spidey British Hardcover Books</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/paper.JPG'}}" routerLink="../spideypaperbackbooks">
+                <div class = "centered"> Spidey Paperback Books</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/manga.JPG'}}" routerLink="../spideysatellitetitles">
+                <div class = "centered"> Spidey Satellite Titles</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/smallbook.JPG'}}" routerLink="../spideysmallbooks">
+                <div class = "centered"> Spidey Small Books</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/stan.JPG'}}" routerLink="../stanlee">
+                <div class = "centered"> Stan Lee</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/tales.JPG'}}" routerLink="../stevelevinesmarveltales">
+                <div class = "centered"> Steve Levine's Marvel Tales</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/oneshot.JPG'}}" routerLink="../stevelevinesoneshotsminiseries">
+                <div class = "centered"> Steve Levine's One-Shots & Miniseries</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/oversize.JPG'}}" routerLink="../stevelevinesoversizedspidermanmagazines">
+                <div class = "centered"> Steve Levine's Oversized Spider-Man Magazines</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/vinyl.JPG'}}" routerLink="../stevelevinesspidermanrecordsvinyls">
+                <div class = "centered"> Steve Levine's Spider-Man Records & Vinyls</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/kids.JPG'}}" routerLink="../stevelevinesspideykids">
+                <div class = "centered"> Steve Levine's Spidey Kids</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/trib.JPG'}}" routerLink="../stevelevinestribcomicbooks">
+                <div class = "centered"> Steve Levine's Trib Comic Books</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/sunday.JPG'}}" routerLink="../sundaybulletinsundaystrips">
+                <div class = "centered"> Sunday Bulletin Sunday Strips</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/toybiz.JPG'}}" routerLink="../toybizkooltoysgiveaways">
+                <div class = "centered"> ToyBiz & Kool Toys Giveaways</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/toyfare.JPG'}}" routerLink="../toyfaremagazine">
+                <div class = "centered"> Toyfare Magazine</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/trade.JPG'}}" routerLink="../trademagazines">
+                <div class = "centered"> Trade Magazines</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/ultimate.JPG'}}" routerLink="../ultimatespidermanandult">
+                <div class = "centered"> Ultimate Spider-Man and Ult. Sp. Team-Up</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/web.JPG'}}" routerLink="../webofspidermanandannuals">
+                <div class = "centered"> Web of Spider-Man and Annuals</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/webspinner.JPG'}}" routerLink="../webspinners">
+                <div class = "centered"> Webspinners</div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        </mat-card>
+        </div>
+</div>
+

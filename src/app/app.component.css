@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'THE AMAZING SPIDER-MAN';
+    src: url('/assets/THEAMAZINGSPIDER-MAN.woff2') format('woff2'),
+        url('/assets/THEAMAZINGSPIDER-MAN.woff') format('woff'),
+        url('/assets/THEAMAZINGSPIDER-MAN.svg#THEAMAZINGSPIDER-MAN') format('svg'),
+        url('/assets/THEAMAZINGSPIDER-MAN.ttf') format("truetype");
+    color: black;
+}
