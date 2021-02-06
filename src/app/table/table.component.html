@@ -1,17 +1,132 @@
 
-<mat-toolbar>{{this.name}}</mat-toolbar>
-<!--
-<div>
-  <video controls height="600" style="right: 0; top: 0; min-width:100%;"
-      #videoPlaye >
-    <source src="{{this.video}}" type="video/mp4">
-    Your browser does not support the video tag.
+<mat-toolbar>
+  <span>{{this.name}}</span>
+  <span style="flex: 1 1 auto;"></span>
+  <button style="margin-right: 1%" mat-raised-button (click)="downloadSheet()"> Download as XLSX </button>
+</mat-toolbar>
+<mat-card *ngIf="name == 'ASM 1-700'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">AMAZING FANTASY INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/AF.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
     </video>
-</div>
--->
-<div>
-  
+</mat-card>
+<mat-card *ngIf="name == 'ASM 1-700'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">ASM INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/ASM.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'ASM High Value Appearances - CGC'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">AMAZING ADULT FANTASY INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/AAF.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'ASM Appearances in Magazines'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">MAGAZINE INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/Magazines S. Levine.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'Nude'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">NUDE INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/Nude Collection S. Levine.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'Nude'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">DIABOLIQUE INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/dia.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'Showcase Toys'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">SHOWCASE TOYS INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/Showcase Items S. Levine.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'Stan Lee'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">STAN LEE INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/Stan Lee S. Levine.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'Fanzines'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">FANZINES INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/Fanzines S. Levine.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'Electric Company Magazines - Complete'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">ELECTRIC COMPANY MAGAZINES INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/Electric Company Run S. Levine.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'Spiderman Cassettes'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">RECORDS AND CASSETTES INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/Records & Casettes S. Levine.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'Steve Levine\'s Spider-Man Records & Vinyls'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">RECORDS AND CASSETTES INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/Records & Casettes S. Levine.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<mat-card *ngIf="name == 'Giant-Sized Coloring Books and Items'" style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 30%;">
+  <mat-card-header>
+      <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">GIANT SIZED COLORING BOOKS INTRODUCTION</mat-card-title>
+    </mat-card-header>
+      <video controls #videoPlayer style="max-width: 100%;" >
+          <source src="{{'assets/Giant Size Coloring Books S. Levine.mp4'}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+</mat-card>
+<div>  
 <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="25"></mat-paginator>
+<mat-form-field>
+  <mat-label> Search </mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. amazing" #input>
+</mat-form-field>
 <mat-table [dataSource]="dataSource" matSort>
     <!-- Address Column -->
     <ng-container matColumnDef="ID" >
@@ -65,7 +180,7 @@
 
       <ng-container matColumnDef="Image">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Image </mat-header-cell>
-        <mat-cell *matCellDef="let row"> <img src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/' + row.Image_URL}}" (error)="img.src='https://spider-steve-backend.wl.r.appspot.com/get_image/home/soon.jpg'; fixrow(row);" (click)="openDialog(row.Title, row.Volume, 'https://spider-steve-backend.wl.r.appspot.com/get_image/' + row.Image_URL)" width="70" height="100" #img> </mat-cell>
+        <mat-cell *matCellDef="let row"> <img src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/' + row.Image_URL}}" (error)="img.src='https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/soon.jpg'; fixrow(row);" (click)="openDialog(row.Title, row.Volume, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/' + row.Image_URL)" width="70" height="100" #img> </mat-cell>
       </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

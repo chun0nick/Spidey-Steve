@@ -13,19 +13,22 @@ export class DashboardComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
-  openDialog(name: string, volume : number, url: string) {
-    console.log(url);
+  openDialog(name: string, volume : string, url: string) {
     let dialogRef = this.dialog.open(ImageDialogComponent);
-    dialogRef.componentInstance.name = name + ' ' + volume;
+    if (volume !== null && volume !== undefined && isFinite(Number(volume))) {
+      dialogRef.componentInstance.name = name + ' ' + volume;
+    } else {
+      dialogRef.componentInstance.name = name
+    }
     dialogRef.componentInstance.url = url;
   }
 
   diaarticle() {
-    window.open("assets/diabolique.pdf");
+    window.open("https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/diabolique.pdf");
   }
 
   openArticle() {
-    window.open("assets/fullarticle.pdf");
+    window.open("https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/fullarticle.pdf");
   }
 
   openPersonal() {

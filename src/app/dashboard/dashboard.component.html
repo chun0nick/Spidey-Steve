@@ -1,5 +1,5 @@
 <div>
-    <mat-toolbar style="margin: 0 auto;">
+    <mat-toolbar style="margin: 0 auto; text-align: center;">
     <mat-toolbar-row>
         <span style="font-family: THE AMAZING SPIDER-MAN; font-size: xx-large; margin: auto;"> THE SPIDER-STEVE COLLECTION </span>
     </mat-toolbar-row>
@@ -7,58 +7,59 @@
         <span style="margin:auto;"> Contact Michael at Fairway Comics and Collectibles with questions: </span> 
     </div>
     <div style="text-align: center;">
-        <span style="margin:auto;"> <b> Phone: </b> (310)-391-633nine,</span>
+        <span style="margin:auto;"> <b> Phone: </b> (310)-291-633nine,</span>
         <span style="margin:auto;"> <b> Email: </b>mbrunn03(at)aol.com,</span>
         <span style="margin:auto;"> <b> Instagram: </b> @fairwaycomicsncollectibles</span>
     </div>
-        <span style="margin:auto;"> (It's for <b>SALE</b>-but not for long!)</span>
+        <span style="margin:auto; max-width:60%"> It's for <b>SALE</b> to one lucky buyer as a collection-but not for long!</span>
+        <span style="margin:auto; max-width: 60%"> <b style="font-size: x-large;"> This website is best accessed via Desktop </b></span>
     </mat-toolbar>
 </div>
 <div style="padding-bottom: 5px;">
-    <mat-card style= "border: 3px solid black; max-width: 200px; display: inline-block; vertical-align: top;">
+    <mat-card style= "border: 3px solid black; min-width: 10%; display: inline-block; vertical-align: top; align-content: center;">
         <mat-card-header>
-            <mat-card-title style="font-family: THE AMAZING SPIDER-MAN; padding-left: 15px;">SPREADSHEETS</mat-card-title>
+            <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">SPREADSHEETS</mat-card-title>
         </mat-card-header>
-    <mat-list style="max-width: 200px;">
-        <mat-list-item style="min-height: 60px;">
-            <button style="min-height: 50px; min-width: 150px;"mat-raised-button routerLink='../asm'> ASM 1-700 </button>
+    <mat-list>
+        <mat-list-item style="min-height: 20%; padding-bottom: 10%">
+            <button style="min-width: 100%; min-height: 100%;"mat-raised-button routerLink='../asm'> ASM 1-700 </button>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item style="min-height: 60px; padding-top: 10px;">
-            <button style="min-height: 50px; min-width: 150px;" mat-raised-button routerLink='../appearances'>Appearances</button>
+        <mat-list-item style="min-height: 20%; padding-top: 10%; padding-bottom: 10%">
+            <button style="min-width: 100%; min-height: 100%;" mat-raised-button routerLink='../app'>Appearances</button>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item style="min-height: 60px; padding-top: 10px;">
-            <button style="min-height: 50px;min-width: 150px;" mat-raised-button routerLink='../giveaways'>Giveaways</button>
+        <mat-list-item style="min-height: 20%; padding-top: 10%; padding-bottom: 10%">
+            <button style="min-width: 100%; min-height: 100%;" mat-raised-button routerLink='../giveaways'>Giveaways</button>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item style="min-height: 60px; padding-top: 10px;">
-            <button style="min-height: 50px;min-width: 150px;" mat-raised-button routerLink='../toys'>Toys</button>
+        <mat-list-item style="min-height: 20%; padding-top: 10%; padding-bottom: 10%">
+            <button style="min-width: 100%; min-height: 100%;" mat-raised-button routerLink='../toys'>Toys</button>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item style="min-height: 60px; padding-top: 10px;">
-            <button style="min-height: 50px;min-width: 150px;" mat-raised-button routerLink='../art'>Art</button>
+        <mat-list-item style="min-height: 20%; padding-top: 10%; padding-bottom: 10%">
+            <button style="min-width: 100%; min-height: 100%;" mat-raised-button routerLink='../art'>Art</button>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item style="min-height: 60px; padding-top: 20px;">
-            <button style="min-height: 50px;min-width: 150px;" mat-raised-button routerLink='../rest'>The Rest</button>
+        <mat-list-item style="min-height: 20%; padding-top: 10%; padding-bottom: 10%">
+            <button style="min-width: 100%; min-height: 100%;" mat-raised-button routerLink='../rest'>The Rest</button>
         </mat-list-item>
     </mat-list>
 </mat-card>
-    <mat-card style = "display: inline-block; vertical-align: top; border: 3px solid black">
+    <mat-card style = "display: inline-block; vertical-align: top; border: 3px solid black; max-width: 45%">
         <mat-card-header>
             <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">COLLECTION INTRODUCTION BY SPIDER-STEVE</mat-card-title>
           </mat-card-header>
-            <video controls #videoPlayer style="max-width: 690px;" >
+            <video poster="assets/thumbnail.JPG" controls #videoPlayer style="width: 100%;" >
                 <source src="{{'assets/IMG_1816.mp4'}}" type="video/mp4">
                 Your browser does not support the video tag.
           </video>
     </mat-card>          
-    <mat-card style = "display: inline-block; vertical-align: top; border: 3px solid black">
+    <mat-card style = "display: inline-block; vertical-align: top; border: 3px solid black; width: 30%">
         <mat-card-header>
             <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">COLLECTION COMIC BOOK</mat-card-title>
           </mat-card-header>
-            <img class="fade" style = "max-width: 503px" src="{{'assets/cover.jpg'}}" routerLink='../comic'>
+            <img class="fade" style = "width: 100%" src="{{'assets/cover.jpg'}}" routerLink='../comic'>
     </mat-card>
 </div>
 <div style="padding-bottom: 5px;">
@@ -68,14 +69,14 @@
         </mat-card-header>
         <mat-grid-list cols="3" rowHeight="1:1.5">
             <mat-grid-tile routerLinkActive="active">
-                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/26st97.JPG'}}" (click)="openDialog('Strange Tales', 97, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/26st97.JPG')">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/26st97.JPG'}}" (click)="openDialog('Strange Tales', '97', 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/26st97.JPG')">
             </mat-grid-tile>
             <mat-grid-tile>
-                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/2aaf14.JPG'}}" (click)="openDialog('Amazing Adult Fantasy', 14, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/2aaf14.JPG')">
+                <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/2aaf14.JPG'}}" (click)="openDialog('Amazing Adult Fantasy', '14', 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/2aaf14.JPG')">
             </mat-grid-tile>
             <mat-grid-tile>
                 <div>
-                <img class="fade" style="max-width:90%; max-height:80%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/dia1.JPG'}}" routerLink='../diabolique'>
+                <img class="fade" style="max-width:90%; max-height:80%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/dia1.JPG'}}" routerLink='../diabolique'>
                 <button mat-raised-button (click)="diaarticle()"> Why is this a prequel? </button>
             </div>
             </mat-grid-tile>
@@ -85,7 +86,7 @@
         <mat-card-header>
             <mat-card-title style="font-family: THE AMAZING SPIDER-MAN;">AMAZING FANTASY</mat-card-title>
         </mat-card-header>
-        <img class="fade" style="max-width: 100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/2.JPG'}}" (click)="openDialog('Amazing Fantasy', 15, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/2.JPG')">
+        <img class="fade" style="max-width: 100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/2.JPG'}}" (click)="openDialog('Amazing Fantasy', '15', 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/2.JPG')">
     </mat-card>
 </div>
 <div style="padding-bottom: 5px;">
@@ -95,19 +96,19 @@
       </mat-card-header>
 <mat-grid-list cols="5" rowHeight="1:1.5">
 <mat-grid-tile routerLinkActive="active">
-    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/3.JPG'}}" (click)="openDialog('Amazing Spider-Man', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/3.JPG')">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/3.JPG'}}" (click)="openDialog('Amazing Spider-Man', '1', 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/3.JPG')">
 </mat-grid-tile>
 <mat-grid-tile>
-    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/4.JPG'}}" (click)="openDialog('Amazing Spider-Man', 2, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/4.JPG')">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/4.JPG'}}" (click)="openDialog('Amazing Spider-Man', '2', 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/4.JPG')">
 </mat-grid-tile>
 <mat-grid-tile>
-    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/5.JPG'}}" (click)="openDialog('Amazing Spider-Man', 3, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/5.JPG')">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/5.JPG'}}" (click)="openDialog('Amazing Spider-Man', '3', 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/5.JPG')">
 </mat-grid-tile>
 <mat-grid-tile>
-    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/6.JPG'}}" (click)="openDialog('Amazing Spider-Man', 4, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/6.JPG')">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/6.JPG'}}" (click)="openDialog('Amazing Spider-Man', '4', 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/6.JPG')">
 </mat-grid-tile>
 <mat-grid-tile>
-    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/7.JPG'}}" (click)="openDialog('Amazing Spider-Man', 5, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/7.JPG')">
+    <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/7.JPG'}}" (click)="openDialog('Amazing Spider-Man', '5', 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/7.JPG')">
 </mat-grid-tile>
 </mat-grid-list>
 </mat-card>
@@ -119,35 +120,37 @@
           </mat-card-header>
     <mat-grid-list cols="6" rowHeight="1:1.5">
     <mat-grid-tile>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5389.JPG'}}" (click)="openDialog('Captain Action', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5389.JPG')">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5389.JPG'}}" (click)="openDialog('Captain Action', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5389.JPG')">
     </mat-grid-tile>
     <mat-grid-tile>
         <div>
-            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5826.JPG'}}" (click)="openDialog('Marvel Super Hero Express', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5826.JPG')">
-            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5375.JPG'}}" (click)="openDialog('Amazing Spider Man Scooter', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5375.JPG')">
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5826.JPG'}}" (click)="openDialog('Marvel Super Hero Express', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5826.JPG')">
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5375.JPG'}}" (click)="openDialog('Amazing Spider Man Scooter', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5375.JPG')">
         </div>
     </mat-grid-tile>
     <mat-grid-tile>
         <div>
-            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/tricycles.JPG'}}" (click)="openDialog('Marvel Super-Hero Tricycles', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/tricycles.JPG')">
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/camels.jpg'}}" (click)="openDialog('Marvel Camel Cigarettes', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/camels.jpg')">
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/tricycles.JPG'}}" (click)="openDialog('Marvel Super-Hero Tricycles', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/tricycles.JPG')">
+            <img class="fade" style="max-width:95%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/camels.jpg'}}" (click)="openDialog('Marvel Camel Cigarettes', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/camels.jpg')">
+            <img class="fade" style="max-width:95%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5867.JPG'}}" (click)="openDialog('Spiderman Camel Cigarettes', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5867.JPG')">
         </div>
     </mat-grid-tile>
     <mat-grid-tile>
     <div>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/flyers.jpg'}}" (click)="openDialog('Marvel Flyers', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/flyers.jpg')">
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/flyers3.JPG'}}" (click)="openDialog('Marvel Flyers', 2, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/flyers3.JPG')">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/flyers.jpg'}}" (click)="openDialog('Marvel Flyers', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/flyers.jpg')">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/flyers3.JPG'}}" (click)="openDialog('Marvel Flyers', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/flyers3.JPG')">
     </div>
     </mat-grid-tile>
 
     <mat-grid-tile>
     <div>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5967.JPG'}}" (click)="openDialog('Marvel Mini Books', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5967.JPG')">
-        <img class="fade" style="padding-left: 20%; max-width:55%; max-height:60%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5852.JPG'}}" (click)="openDialog('Marvel Lollipop Mini Books', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/IMG_5852.JPG')">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5967.JPG'}}" (click)="openDialog('Marvel Mini Books', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5967.JPG')">
+        <img class="fade" style="max-width:50%; max-height:60%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5852.JPG'}}" (click)="openDialog('Marvel Lollipop Mini Books', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/IMG_5852.JPG')">
+        <img class="fade" style="max-width:50%; max-height:60%; padding-bottom: 30%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/minibook.jpg'}}" (click)="openDialog('Marvel Mini Books', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/minibook.jpg')">
     </div>
     </mat-grid-tile>
     <mat-grid-tile>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/pinball.JPG'}}" (click)="openDialog('Spiderman Pinball Machine', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/home/pinball.JPG')">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/pinball.JPG'}}" (click)="openDialog('Spiderman Pinball Machine', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/pinball.JPG')">
     </mat-grid-tile>
     </mat-grid-list>
     </mat-card>
@@ -159,13 +162,13 @@
           </mat-card-header>
     <mat-grid-list cols="3" rowHeight="1:1.25">
         <mat-grid-tile>
-            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_0399.JPG'}}" (click)="openDialog('Original Art by John Romita Sr.', 1, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_0399.JPG')">
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/art/IMG_0399.JPG'}}" (click)="openDialog('Original Sketch for Amazing Spider-Man #583 - Obama Issue - Alt. Cover Romita Variant (2009)', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/art/IMG_0399.JPG')">
         </mat-grid-tile>
     <mat-grid-tile>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5541.JPG'}}" (click)="openDialog('ASM Original Art by John Romita Sr.', 61, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5541.JPG')">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/art/IMG_5541.JPG'}}" (click)="openDialog('Amazing Spider-Man #61 (1968) Original Art by John Romita Sr.', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/art/IMG_5541.JPG')">
     </mat-grid-tile>
     <mat-grid-tile>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5537.JPG'}}" (click)="openDialog('ASM Original Art by John Romita Sr.', 75, 'https://spider-steve-backend.wl.r.appspot.com/get_image/art/IMG_5537.JPG')">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/art/IMG_5537.JPG'}}" (click)="openDialog('Amazing Spider-Man #75 (1969) Original Art by John Romita Sr.', null, 'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/art/IMG_5537.JPG')">
     </mat-grid-tile>
     </mat-grid-list>
     </mat-card>
@@ -179,19 +182,19 @@
         <mat-grid-tile>
             <div>
             <span style="margin:auto;"> <b>Spider-Steve's Book Q & A</b> </span>
-            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/riddles.JPG'}}" (click)="openQA()">
+            <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/riddles.JPG'}}" (click)="openQA()">
         </div>
         </mat-grid-tile>
     <mat-grid-tile>
         <div>
         <span style="margin:auto;"> <b>Article on Collection</b> </span>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/article.JPG'}}" (click)="openArticle()">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/article.JPG'}}" (click)="openArticle()">
         </div>
     </mat-grid-tile>
     <mat-grid-tile>
         <div>
         <span style="margin:auto;"> <b>Spider-Steve's Law Website</b> </span>
-        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://spider-steve-backend.wl.r.appspot.com/get_image/home/personalwebsite.JPG'}}" (click)="openPersonal()">
+        <img class="fade" style="max-width:100%; max-height:100%;" src="{{'https://backend-deploy-ljkpxx3zga-uw.a.run.app/get_image/home/personalwebsite.JPG'}}" (click)="openPersonal()">
     </div>
     </mat-grid-tile>
     </mat-grid-list>

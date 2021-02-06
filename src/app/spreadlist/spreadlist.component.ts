@@ -11,9 +11,14 @@ import { MatDialog } from '@angular/material/dialog';
 export class SpreadlistComponent implements OnInit {
 
   toys: boolean;
+  appearances: boolean;
   giveaways: boolean;
+  comictitles: boolean;
+  british: boolean;
   rest: boolean;
   art: boolean;
+  kids: boolean;
+  misc: boolean;
 
   constructor(private route: ActivatedRoute, public dialog: MatDialog) { }
 
@@ -23,13 +28,21 @@ export class SpreadlistComponent implements OnInit {
       this.giveaways = (v.spread === "giveaway");
       this.rest = (v.spread === "rest");
       this.art = (v.spread == "art");
+      this.appearances = (v.spread == "appearance");
+      this.comictitles = (v.spread == "comictitles");
+      this.british = (v.spread == "british");
+      this.kids = (v.spread == "kids");
+      this.misc = (v.spread == "misc");
     })
   }
 
-  openDialog(name: string, volume : number, url: string) {
-    console.log(url);
+  openDialog(name: string, volume : string, url: string) {
     let dialogRef = this.dialog.open(ImageDialogComponent);
-    dialogRef.componentInstance.name = name + ' ' + volume;
+    if (volume !== null && volume !== undefined && isFinite(Number(volume))) {
+      dialogRef.componentInstance.name = name + ' ' + volume;
+    } else {
+      dialogRef.componentInstance.name = name
+    }
     dialogRef.componentInstance.url = url;
   }
 }

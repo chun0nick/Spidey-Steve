@@ -1,2 +1,8 @@
-
-<slideshow #slideshow minHeight=325% [imageUrls]="imageURLS" (onSlideRight)="goToTop()" (onSlideLeft)="goToTop()"></slideshow>
+<mat-toolbar>{{this.name}}</mat-toolbar>
+<div class="container">
+    <button style="width:10%;height:30%;" disabled="{{index == 0}}" mat-raised-button (click)="prev()"> Previous </button>
+    <button style="float: right;width:10%;height:30%;" disabled="{{index == (imageURLS.length - 1)}}"  mat-raised-button (click)="next()"> Next </button>
+    <img style="max-width: 80%;   display: block; margin-left: auto; margin-right: auto;" src="{{getLink()}}">
+    <button style="width:10%;height:30%;" disabled="{{index == 0}}" mat-raised-button (click)="prev()"> Previous </button>
+    <button style="float: right;width:10%;height:30%;" disabled="{{index == (imageURLS.length - 1)}}" mat-raised-button (click)="next()"> Next </button>
+</div>

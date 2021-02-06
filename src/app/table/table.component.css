@@ -7,3 +7,9 @@
 .rpad {
     padding-right: 10px;
 }
+
+.mat-form-field {
+    font-size: 14px;
+    width: 20%;
+    padding-left: 1%;
+  }

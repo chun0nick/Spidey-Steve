@@ -13,6 +13,11 @@ const routes: Routes = [{path: 'appearances', component: TableComponent, data : 
                         {path: 'diabolique', component: SlideshowComponent, data: {spread: "dia"}},
                         {path: 'art', component: SpreadlistComponent, data: {spread: "art"}},
                         {path: 'toys', component: SpreadlistComponent, data: {spread: "toys"}},
+                        {path: 'app', component: SpreadlistComponent, data: {spread: "appearance"}},
+                        {path: 'comictitles', component: SpreadlistComponent, data: {spread: "comictitles"}},
+                        {path: 'kids', component: SpreadlistComponent, data: {spread: 'kids'}},
+                        {path: 'british', component: SpreadlistComponent, data: {spread: "british"}},
+                        {path: 'misc', component: SpreadlistComponent, data: {spread: 'misc'}},
                         {path: 'showcasetoys', component: TableComponent, data: {spread: "showcase"}},
                         {path: 'boxedtoys', component: TableComponent, data: {spread: "boxed"}},
                         {path: "grailtoys", component: TableComponent, data: {spread: "grail"}},
@@ -78,7 +83,7 @@ const routes: Routes = [{path: 'appearances', component: TableComponent, data : 
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled', relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

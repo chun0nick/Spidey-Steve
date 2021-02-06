@@ -28,6 +28,145 @@ export class TableComponent implements OnInit {
     this.getData();
   }
 
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
+
+  downloadSheet() {
+    let link = document.createElement("a");
+    if (this.name == "ASM 1-700") {
+      link.download = "ASM 1-700 and Annuals Updated.xlsx";
+    } else if (this.name == "Appearances") {
+      link.download = "Levine's Spidey App. - Master List Final 5.xlsx"
+    } else if (this.name == "Boxed Toys") {
+      link.download = "TOYSBOXES.xlsx"
+    } else if (this.name == "Showcase Toys") {
+      link.download = "SHOWCASETOYS.xlsx"
+    } else if (this.name == "Grail Toys") {
+      link.download = "GRAILTOYS.xlsx"
+    } else if (this.name == "Large Giveaways") {
+      link.download = "GIveaways - Large Size.xlsx"
+    } else if (this.name == "Comic Giveaways") {
+      link.download = "Giveaways Comic Book Size Final.xlsx"
+    } else if (this.name == "Rare Giveaways") {
+      link.download = "GIveaways - Rare.xlsx"
+    } else if (this.name == "Small Giveaways") {
+      link.download = "Giveaways & Promo Items - Small.xlsx"
+    } else if (this.name == "ASM Appearances in Magazines") {
+      link.download = "ASM Appearances in Magazines.xlsx"
+    } else if (this.name == "ASM Early Unslabbed Appearances") {
+      link.download = "ASM Early Unslabbed Appearances.xlsx"
+    } else if (this.name == "ASM High Value Appearances - CGC") {
+      link.download = "ASM High Value Appearances - CGC.xlsx"
+    } else if (this.name == "Cereal Food Boxes and Calendars") {
+      link.download = "Cereal Food Boxes and Calendars.xlsx"
+    } else if (this.name == "Comes To Life Books and Reader") {
+      link.download = "Comes To Life Books and Reader.xlsx"
+    } else if (this.name == "Comicon") {
+      link.download = "Comicon.xlsx"
+    } else if (this.name == "Cracked, Crazy and Mad Mag") {
+      link.download = "Cracked, Crazy and Mad Mag. ASM Appearances.xlsx"
+    } else if (this.name == "Electric Company Magazines - Complete") {
+      link.download = "Electric Company Magazines - Complete.xlsx"
+    } else if (this.name == "Fanzines") {
+      link.download = "Fanzines.xlsx"
+    } else if (this.name == "Giant-Size Books (Orig. Buy)") {
+      link.download = "Giant-Size Books (Orig. Buy).xlsx"
+    } else if (this.name == "Giant-Sized Coloring Books and Items") {
+      link.download = "Giant-Sized Coloring Books and Items.xlsx"
+    } else if (this.name == "Handbook Marvel Universe") {
+      link.download = "Handbook Marvel Universe.xlsx"
+    } else if (this.name == "Marvel Age-Ann-Preview") {
+      link.download = "Marvel Age-Ann-Preview.xlsx"
+    } else if (this.name == "Marvel Team-Up (UK)") {
+      link.download = "Marvel Team-Up (UK).xlsx"
+    } else if (this.name == "Marvel Team-Up") {
+      link.download = "Marvel Team-Up.xlsx"
+    } else if (this.name == "Mighty World of Marvel (UK)") {
+      link.download = "Mighty World of Marvel (UK).xlsx"
+    } else if (this.name == "Nude") {
+      link.download = "Nude.xlsx"
+    } else if (this.name == "Official Handbook Marvel Universe") {
+      link.download = "Official Handbook Marvel Universe.xlsx"
+    } else if (this.name == "Official Handbooks Marvel Universe - ALL") {
+      link.download = "Official Handbooks Marvel Universe - ALL.xlsx"
+    } else if (this.name == "Peter Parker Spectacular Spiderman") {
+      link.download = "Peter Parker Spectaular Spiderman.xlsx"
+    } else if (this.name == "Peter Parker Spider-Man Vol 2") {
+      link.download = "Peter Parker Spider-Man Vol2.xlsx"
+    } else if (this.name == "Sales To Astonish-Mega Marvel -Dealer Catalogs") {
+      link.download = "Sales To Astonish-Mega Marvel -Dealer Catalogs.xlsx"
+    } else if (this.name == "Sensational Spider-Man") {
+      link.download = "Sensational Spider-Man.xlsx"
+    } else if (this.name == "Spectacular Spiderman Annuals") {
+      link.download = "Spectacular Spiderman Annuals.xlsx"
+    } else if (this.name == "Spider-Girl") {
+      link.download = "Spider-Girl.xlsx"
+    } else if (this.name == "Spider-Man Comics Weekly (UK)") {
+      link.download = "Spider-Man Comics Weekly (UK).xlsx"
+    } else if (this.name == "Spider-Man Flipbooks") {
+      link.download = "Spider-Man Flipbooks.xlsx"
+    } else if (this.name == "Spider-Man Gottlieb Pinball Books") {
+      link.download = "Spider-Man Gottlieb Pinball Books.xlsx"
+    } else if (this.name == "Spider-Man Off-Beat Rare Items") {
+      link.download = "Spider-Man Off-Beat Rare Items.xlsx"
+    } else if (this.name == "Spider-Man TPB, Graphic Novels, PB and HC") {
+      link.download = "Spider-Man TPB, Graphic Novels, PB and HC.xlsx"
+    } else if (this.name == "Spider-Man UK Summer_Wint Sps") {
+      link.download = "Spider-Man UK Summer_Wint Sps & Zoids.xlsx"
+    } else if (this.name == "Spiderman 1990 (McFarlane)") {
+      link.download = "Spiderman 1990 (McFarlane).xlsx"
+    } else if (this.name == "Spider-Man 30 Cent Variants") {
+      link.download = "spiderman 30 cent variants.xlsx"
+    } else if (this.name == "Spiderman Cassettes") {
+      link.download = "Spiderman Cassettes.xlsx"
+    } else if (this.name == "Spidey British Hardcover Books") {
+      link.download = "Spidey British Hardcover Books.xlsx"
+    } else if (this.name == "Spidey Paperback Books") {
+      link.download = "Spidey Paperback Books.xlsx"
+    } else if (this.name == "Spidey Satellite Titles") {
+      link.download = "Spidey Satellite Titles.xlsx"
+    } else if (this.name == "Spidey Small Books") {
+      link.download = "Spidey Small Books.xlsx"
+    } else if (this.name == "Stan Lee") {
+      link.download = "Stan Lee.xlsx"
+    } else if (this.name == "Steve Levine's Marvel Tales") {
+      link.download = "Steve Levine's Marvel Tales.xlsx"
+    } else if (this.name == "Steve Levine's One-Shots & Miniseries") {
+      link.download = "Steve Levine's One-Shots & Miniseries.xlsx"
+    } else if (this.name == "Steve Levine's Oversized Spider-Man Magazines") {
+      link.download = "Steve Levine's Oversized Spider-Man Magazines.xlsx"
+    } else if (this.name == "Steve Levine's Spider-Man Records & Vinyls") {
+      link.download = "Steve Levine's Spider-Man Records & Vinyls.xlsx"
+    } else if (this.name == "Steve Levine's Spidey Kids") {
+      link.download = "Steve Levine's Spidey Kids.xlsx"
+    } else if (this.name == "Steve Levine's Trib Comic Books") {
+      link.download = "Steve Levine's Trib Comic Books.xlsx"
+    } else if (this.name == "Sunday Bulletin Sunday Strips") {
+      link.download = "Sunday Bulletin Sunday Strips.xlsx"
+    } else if (this.name == "ToyBiz & Kool Toys Giveaways") {
+      link.download = "ToyBiz & Kool Toys Giveaways.xlsx"
+    } else if (this.name == "Toyfare Magazine") {
+      link.download = "Toyfare Magazine.xlsx"
+    } else if (this.name == "Trade Magazines") {
+      link.download = "Trade Magazines.xlsx"
+    } else if (this.name == "Ultimate Spider-Man and Ult. Sp. Team-Up") {
+      link.download = "Ultimate Spider-Man and Ult Sp Team-Up.xlsx"
+    } else if (this.name == "Web of Spider-Man and Annuals") {
+      link.download = "Web of Spider-Man and Annuals.xlsx"
+    } else if (this.name == "Webspinners") {
+      link.download = "Webspinners"
+    }
+
+    link.href = "assets/Original_Sheets/" + link.download;
+    link.click();
+  }
+
   getData() {
     this.route.data.subscribe(v => {
       if (v.spread === "app") {
@@ -86,7 +225,7 @@ export class TableComponent implements OnInit {
       } else if (v.spread == "comicgiveaway") {
         this.comicData.getcomicGiveAway().subscribe((apps) => {
           this.displayedColumns = ["ID", "Title", "Year", "Publisher", "Sponsor", "Note", "Image"];
-          this.name = "Large Giveaways";
+          this.name = "Comic Giveaways";
           // this.video = 'assets/ASM #1-700 S. Levine.mp4';
           this.dataSource = new MatTableDataSource(apps);
           this.dataSource.paginator = this.paginator;
@@ -337,7 +476,7 @@ export class TableComponent implements OnInit {
         } else if (v.spread == 'spidermanoffbeatrareitems') {
         this.comicData.getSpiderManOffBeatRareItems().subscribe((apps) => {
           this.displayedColumns = ["ID", "Title", "Year", "Publisher", "Note", "Image"];  
-        this.name = "Spider-Man Off-Beat Rare Items ";
+        this.name = "Spider-Man Off-Beat Rare Items";
         this.dataSource = new MatTableDataSource(apps);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
@@ -369,7 +508,7 @@ export class TableComponent implements OnInit {
         } else if (v.spread == 'spiderman30centvariants') {
         this.comicData.getspiderman30centvariants().subscribe((apps) => {
           this.displayedColumns = ["ID", "Title", "Volume", "Year", "Note", "Image"];  
-        this.name = "spiderman 30 cent variants";
+        this.name = "Spider-Man 30 Cent Variants";
         this.dataSource = new MatTableDataSource(apps);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
@@ -532,9 +671,14 @@ export class TableComponent implements OnInit {
 }
   openDialog(name: string, volume : string, url: string) {
     let dialogRef = this.dialog.open(ImageDialogComponent);
-    dialogRef.componentInstance.name = name + ' ' + volume;
+    if (volume !== null && volume !== undefined && isFinite(Number(volume))) {
+      dialogRef.componentInstance.name = name + ' ' + volume;
+    } else {
+      dialogRef.componentInstance.name = name
+    }
     dialogRef.componentInstance.url = url;
   }
+
   fixrow(row : Comic) {
     row.Image_URL = 'home/soon.jpg';
   }
@@ -543,8 +687,8 @@ export class TableComponent implements OnInit {
 
 
 export interface Comic{
-  ID: string;
-  Title: number;
+  ID: number;
+  Title: string;
   Volume: string;
   Year: string;
   Publisher: string;
